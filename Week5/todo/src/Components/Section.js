@@ -135,8 +135,19 @@ const Section = () => {
         </header>
 
         <section className="main">
-          <input className="toggle-all" type="checkbox" />
-          <label htmlFor="toggle-all">Mark all as complete</label>
+          <input className="toggle-all" type="checkbox"  />
+          <label htmlFor="toggle-all" onClick={()=>{
+            let newList = [...mainData];
+            let control = newList.every((todo)=>todo.isActive)
+            if(control){
+              newList.map((todo, index)=> todo.isActive ? todo.isActive=false : "")
+            }
+            else{
+              newList.map((todo, index)=> todo.isActive === false ? todo.isActive=true : "")
+            }
+            
+            setMainData(newList);
+          }} >Mark all as complete</label>
 
           <ul className="todo-list">
             {filtredName === "Active" ? activeData : filtredName === "Completed" ? completedData : allData}
