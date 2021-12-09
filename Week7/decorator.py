@@ -7,8 +7,8 @@ def my_awesome_decorator(fun):
 @my_awesome_decorator
 def mod_batch(*numbers):
   """
-  satır 11 de numbers içindeki değer kadar dönüyoruz ve numbersin içindeki değeri i ye atıyoruz
-  satır 13 de sayı 3 e bölünmüyor ise false dönüyoruz döngü bittiğinde false dönmediysek hazırda bulunan return True çalışıyor
+  satır 12 de numbers içindeki değer kadar dönüyoruz ve numbersin içindeki değeri i ye atıyoruz
+  satır 14 de sayı 3 e bölünmüyor ise false dönüyoruz döngü bittiğinde false dönmediysek hazırda bulunan return True çalışıyor
   """
   for i in numbers:
     if(i % 3 != 0):
